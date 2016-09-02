@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<div th:include="components/header"></div>
+<body role="document" style="padding-top:0px;min-height:100%;">
+<main role="main">
+
+<div class="row">
+	
+	<div class="pane bg-dark-2">
+		<div class="container">
+			<h2 class="type-neutral-11 title">Enablement Courses</h2>
+			<p></p>
+		</div>
+	</div>
+</div>
+
+<table>
+	<tr>
+    	<th>#</th>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Section</th>
+       	<th>Description</th>
+        <th>Slide URL</th>
+        <th>Lab URL</th>
+  	</tr>
+   	<tr th:each="content,iterationStatus  : ${enablementContent}">
+      	<td th:text="${iterationStatus.count}">1</td>
+        <td th:text="${content.courseID}">001</td>
+        <td th:text="${content.title}">title</td>
+       	<td th:text="${content.section}">section</td>
+       	<td th:text="${content.description}">description</td>
+        <td th:text="${content.slideURL}">slideURL</td>
+        <td th:text="${content.labURL}">labURL</td>
+  	</tr>
+</table>
+</main>
+
+<div th:include="components/footer"></div>
+ 
+</body>
+</html>
