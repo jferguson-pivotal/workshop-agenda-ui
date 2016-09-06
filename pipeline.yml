@@ -3,7 +3,7 @@ resources:
   - name: git-repo
     type: git
     source:
-     uri: git@github.com:decelc-pivotal/workshop-agenda.git
+     uri: git@github.com:decelc-pivotal/workshop-agenda-ui.git
      branch: master
      private_key: {{private-repo-key}}
   - name: time
