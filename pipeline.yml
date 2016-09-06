@@ -6,6 +6,7 @@ resources:
      uri: git@github.com:decelc-pivotal/workshop-agenda-ui.git
      branch: master
      private_key: {{private-repo-key}}
+     params: {check: HEAD}
   - name: time
     type: time
     source:
@@ -27,14 +28,14 @@ jobs:
       - get: git-repo
         trigger: true
       - get: time
-
-    - task: maven-package
-      privileged: true
+    - task: build
       file: git-repo/pipeline/maven-package.yml
     - put: resource-deploy-web-app
       params:
-        path: git-repo
-        manifest: git-repo/workshop-agenda/workshop-agenda-service/manifest.yml
+        manifest: git-repo/manifest.yml
+        path: artifact-dir/workshop-agenda-ui*.jar
+        
+        
     #- task: echoJarFile
     #  inputs: time
     #  file: git-repo/pipeline/echoJarFile.yml
