@@ -6,10 +6,9 @@ applications:
   host: workshop-agenda-ui
   path: target/workshop-agenda-ui-0.0.1-SNAPSHOT.jar
   services:
-  - config-server
   - service-registry
   - circuit-breaker
 env:
   SPRING_PROFILES_ACTIVE: pcf
-  CF_TARGET: https://api.run.pivotal.io
+  CF_TARGET: https://api.run.haas-67.pez.pivotal.io
 

@@ -6,7 +6,6 @@ applications:
   host: workshop-agenda-ui
   path: target/workshop-agenda-ui-0.0.1-SNAPSHOT.jar
   services:
-  - config-server
   - service-registry
   - circuit-breaker
 env:
