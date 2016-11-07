@@ -14,7 +14,7 @@
 						<p class="type-brand-8"> 
 							<span th:text="${workshop.date}" style="font-size: xx-large;">Date</span> 
 						</p>	
-						<!-- <img th:src="${workshop.customerLogo}" />		 -->
+						<img th:src="${workshop.customerLogo}" />
 					</div>
 				</div>
 			</div>
@@ -23,15 +23,14 @@
 		    	<div class="container">
 		    	
 			    	<div style="width:25%; display: inline-block; vertical-align: top">	
-			  			<img th:src="@{/images/cfg-logo.png}"></img>	
-						<img th:src="@{/images/rocket.png}"></img>
+					<img th:src="@{/images/rocket.png}"></img>
 						
-						<div class="h3">Instructors</div>
-				    	<p th:each="instructor,iterationStatus  : ${instructors}">
-			        		<span th:text="${instructor.name}">Name</span><br></br>
-			        		<span th:text="${instructor.title}">Title</span><br></br>
-			        		<a th:href="${'mailto:' + instructor.email}" th:text="${instructor.email}">Email</a><br></br>
-			        		<a th:href="${'tel:' + instructor.phone}" th:text="${instructor.phone}">Phone</a><br></br>            
+					<div class="h3">Instructors</div>
+				    		<p th:each="instructor,iterationStatus  : ${instructors}">
+			        			<span th:text="${instructor.name}">Name</span><br></br>
+			        			<span th:text="${instructor.title}">Title</span><br></br>
+			        			<a th:href="${'mailto:' + instructor.email}" th:text="${instructor.email}">Email</a><br></br>
+			        			<a th:href="${'tel:' + instructor.phone}" th:text="${instructor.phone}">Phone</a><br></br>            
 			      		</p>
 					</div>
 					
