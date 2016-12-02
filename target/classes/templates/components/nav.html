@@ -1,0 +1,23 @@
+ <nav class="navbar navbar-pivotal navbar-fixed-top">
+ 	<div class="container-fluid">
+	<div class="navbar-header">
+	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	    <span class="sr-only">Toggle navigation</span>
+	    <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+	  </button>
+	  <div class="nav navbar-brand">
+            <p><a href="/"><img class="nav pivotal-logo" th:src="@{/images/Pivotal_Teal.png}"></img></a></p>
+	  </div>     
+	</div>
+	<div id="navbar" class="navbar-collapse collapse">
+	  <ul class="nav navbar-nav">
+		<li th:each="workshopSession,iterationStatus : ${workshopSessions}">
+			<a th:text="${workshopSession.name}" class="navbar-txt" th:href="@{'dailyContent'(id=${workshopSession.id})}">name</a>
+		</li>
+	    <li><a class="navbar-txt" href="/requirements">Lab Requirements</a></li>
+	  </ul>
+	</div>
+	</div>
+</nav>

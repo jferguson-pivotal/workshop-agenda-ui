@@ -1,0 +1,9 @@
+io/spring/pivotal/workshop/ui/services/Instructor.class
+io/spring/pivotal/workshop/ui/services/Resource.class
+io/spring/pivotal/workshop/ui/services/WorkshopService.class
+io/spring/pivotal/workshop/ui/services/Session.class
+io/spring/pivotal/workshop/ui/services/Session$Topic.class
+io/spring/pivotal/workshop/ui/services/Workshop.class
+io/spring/pivotal/workshop/ui/Application.class
+io/spring/pivotal/workshop/ui/controllers/WorkshopUIController.class
+io/spring/pivotal/workshop/ui/services/Content.class
